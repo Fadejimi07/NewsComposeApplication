@@ -58,6 +58,8 @@ dependencies {
 
     implementation(libs.gson)
     implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
 
     // ViewModel utilities for Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
