@@ -58,9 +58,10 @@ dependencies {
 
     implementation(libs.gson)
     implementation(libs.retrofit)
-    
+
     // ViewModel utilities for Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     // LiveData
     implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.kotlinx.coroutines.android)
 }
