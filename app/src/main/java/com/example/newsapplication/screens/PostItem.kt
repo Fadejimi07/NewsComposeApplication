@@ -9,8 +9,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.newsapplication.retrofit.Post
+import com.example.newsapplication.util.GenerateRandomColors
 
 @Composable
 fun PostItem(post: Post) {
@@ -18,7 +20,11 @@ fun PostItem(post: Post) {
         elevation = CardDefaults.cardElevation(8.dp),
         modifier = Modifier
             .padding(12.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
+        colors = CardDefaults.cardColors().copy(
+            containerColor = GenerateRandomColors.genRandomColor(),
+            contentColor = Color.White,
+        )
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(text = post.title, style = MaterialTheme.typography.labelLarge)
