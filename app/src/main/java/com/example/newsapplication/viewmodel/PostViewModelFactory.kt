@@ -8,7 +8,7 @@ class PostViewModelFactory(val postRepository: PostRepository) : ViewModelProvid
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         @Suppress("UNCHECKED_CAST")
         if (modelClass.isAssignableFrom(PostViewModel::class.java)) {
-            return modelClass as T
+            return PostViewModel(postRepository) as T
         }
         throw IllegalArgumentException("Cannot create view model class")
     }
